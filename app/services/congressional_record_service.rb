@@ -9,5 +9,3 @@ class CongressRecordService
     response
   end
 end
-crs = CongressRecordService.new
-puts crs.call_api
