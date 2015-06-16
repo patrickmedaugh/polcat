@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
     user = User.find_or_create_from_auth(omniauth)
     session[:user_id] = user.id
     if user
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
-      redirect_to hell
+
     end
   end
 

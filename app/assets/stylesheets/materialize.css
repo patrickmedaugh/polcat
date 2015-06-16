@@ -1995,8 +1995,13 @@ a {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
-  .valign-wrapper .valign {
-    display: block; }
+
+.valign {
+    display: block;
+    margin-top: 8em;
+    padding-left: 5.5em;
+    }
+
 
 ul {
   padding: 0; }

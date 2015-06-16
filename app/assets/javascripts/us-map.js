@@ -454,7 +454,6 @@
      */
     _onClick: function(event) {
       var stateData = this._getStateFromEvent(event);
-
       // Stop if no state was found
       if(!stateData.hitArea) {
         return;
