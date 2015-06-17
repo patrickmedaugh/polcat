@@ -5,6 +5,6 @@ class StatesController < ApplicationController
     crs = CongressRecordService.new
     @reps = crs.find_by_state(params[:state])
     binding.pry
-    respond_with @reps
+    # respond_with @reps, status: 201, location: user_path(current_user)
   end
 end
