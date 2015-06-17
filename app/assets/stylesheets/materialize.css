@@ -1623,6 +1623,10 @@
 .transparent-text {
   color: transparent !important; }
 
+.hidden {
+  display: none;
+}
+
 /*** Colors ***/
 /*** Badges ***/
 /*** Buttons ***/

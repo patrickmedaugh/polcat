@@ -1,7 +1,7 @@
 require 'json'
 require 'soda/client'
 
-class CongressRecordService
+class CongressionalRecordService
   attr_reader :states
 
   def find_by_state(state)
@@ -11,7 +11,7 @@ class CongressRecordService
     end
   end
 
-  # private
+  private
 
   def call_api
     @states = {
