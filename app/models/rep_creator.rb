@@ -1,19 +1,15 @@
 class RepCreator
-  attr_reader :service, :reps
+  attr_reader :service
   def self.service
     @service ||=  CongressionalRecordService.new
   end
 
-  def self.generate(state)
-    @reps = service.find_by_state(state)
-    @reps.each do |rep|
-      r = Rep.new
-      r.lastname = rep.lastname
-      r.state = rep.state
-    end
+  def self.find_by_state(state)
+    service.find_by_state(state)
   end
 
-end
+  def self.find_by_votesmart(votesmart)
+    service.find_by_votesmart(votesmart)
+  end
 
-class Rep < OpenStruct
 end

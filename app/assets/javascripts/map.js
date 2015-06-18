@@ -7,7 +7,8 @@ $(document).ready(function() {
           success: function(reps){
             $('#representatives').empty();
             $.each(reps, function(index, rep){
-              $('#representatives').append("<a href= '/' ><p>" + rep.lastname + "</p></a>");
+              console.log(JSON.stringify(rep));
+              $('#representatives').append("<a href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.lastname + "</p></a>");
               $('#map').addClass('.hidden');
             });
           }

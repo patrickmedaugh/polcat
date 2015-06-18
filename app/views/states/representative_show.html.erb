@@ -1,0 +1,12 @@
+<div class='container center-align'>
+<h1><%= @rep.firstname %> <%=@rep.lastname %></h1>
+<p><%= @rep.email %></p>
+<p><%= @rep.phone %></p>
+<p><%= @rep.congresspedia.url if @rep.congresspedia.url%></a></p>
+<% if @rep.twitter %>
+  <p>Twitter: <%= @rep.twitter_id %></p>
+<% end %>
+<% if @rep.youtube_url %>
+  <p>Youtube: <%= @rep.youtube_url.url %></p>
+<% end %>
+</div>

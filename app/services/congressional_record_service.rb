@@ -11,6 +11,13 @@ class CongressionalRecordService
     end
   end
 
+  def find_by_votesmart(votesmart)
+    reps = call_api
+    reps.select do |rep|
+      rep.votesmart_id == votesmart
+    end
+  end
+
   private
 
   def call_api
