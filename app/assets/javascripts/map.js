@@ -3,7 +3,7 @@ $(document).ready(function() {
       click: function(event, data) {
         $.ajax({
           type: "GET",
-          url: "http://localhost:3000/states/" + data.name + ".json",
+          url: "/states/" + data.name + ".json",
           success: function(reps){
             $('#representatives').empty();
             $.each(reps, function(index, rep){

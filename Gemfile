@@ -8,6 +8,7 @@ gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'twitter'
+gem 'hurley'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
