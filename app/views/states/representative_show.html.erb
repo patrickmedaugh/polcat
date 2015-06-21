@@ -1,12 +1,17 @@
 <div class='container center-align'>
-<h1><%= @rep.firstname %> <%=@rep.lastname %></h1>
-<p><%= @rep.email %></p>
-<p><%= @rep.phone %></p>
-<p><%= @rep.congresspedia.url if @rep.congresspedia.url%></a></p>
-<% if @rep.twitter %>
-  <p>Twitter: <%= @rep.twitter_id %></p>
-<% end %>
-<% if @rep.youtube_url %>
-  <p>Youtube: <%= @rep.youtube_url.url %></p>
-<% end %>
+  <h1><%= @rep['first_name'] %> <%= @rep['last_name'] %></h1>
+  <% if @rep['twitter_id'] %>
+    <%= link_to image_tag("http://www.leap-program.org/site/wp-content/uploads/2012/12/twitterbutton2.png", height: '32'), "http://twitter.com/#{@rep['twitter_id']}"%>
+  <% end %>
+  <% if @rep['youtube_id'] %>
+    <%= link_to image_tag("http://cliparts.co/cliparts/di9/Xon/di9XonMjT.png", height: '32'), "http://youtube.com/#{@rep['youtube_id']}"%>
+  <%end%>
+  <h3>Committees</h3>
+
+  <ul>
+    <% @committees.each do |committee|  %>
+    <li><%= committee["name"] %></li>
+    <% end %>
+  </ul>
+
 </div>

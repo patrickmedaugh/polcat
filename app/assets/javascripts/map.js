@@ -5,19 +5,16 @@ $(document).ready(function() {
           type: "GET",
           url: "/states/" + data.name + ".json",
           success: function(reps){
+            console.log(reps.results);
             $('#representatives').empty();
-            $.each(reps, function(index, rep){
+            // console.log(JSON.stringify(reps[0]));
+            $.each(reps.results, function(index, rep){
               console.log(JSON.stringify(rep));
-              $('#representatives').append("<a href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.lastname + "</p></a>");
-              $('#map').addClass('.hidden');
+              $('#representatives').append("<a href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.last_name + "</p></a>");
+            //   $('#map').addClass('.hidden');
             });
           }
         })
-        // $.get('/states/' + data.name).then(function(reps){
-          // reps.empty();
-          // something to this effect \/ \/l
-        //  reps.append("<div>" + reps "</div>")
-        // });
         $('#clicked-state').text('You clicked: '+ data.name);
     }
   });

@@ -8,7 +8,8 @@ class StatesController < ApplicationController
   end
 
   def representative_show
-    @rep = RepCreator.find_by_votesmart(params[:votesmart]).first
+    @rep = RepCreator.find_by_votesmart(params[:votesmart]).first.last.last
+    @committees = RepCreator.get_committees(@rep['bioguide_id'])["results"]
   end
 
 end
