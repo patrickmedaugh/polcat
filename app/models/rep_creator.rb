@@ -1,11 +1,10 @@
 class RepCreator
-  attr_reader :service
+  attr_reader :service, :govtrack
   def self.service
-    @service ||=  SunlightService.new
+    @service  ||=  SunlightService.new
   end
 
   def self.find_by_state(state)
-    puts service.find_by_state(state)
     service.find_by_state(state)
   end
 
@@ -17,4 +16,8 @@ class RepCreator
     service.get_committees(bioguide)
   end
 
+  def self.get_floor_updates(bioguide)
+    updates = service.get_floor_updates(bioguide)
+    updates["results"].first(5)
+  end
 end

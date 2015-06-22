@@ -1,11 +1,27 @@
 <div class='container center-align'>
-  <h1><%= @rep['first_name'] %> <%= @rep['last_name'] %></h1>
+  <h1><%= @rep['first_name'] %> <%= @rep['last_name'] %> <em><%= @rep['party'] %></em></h1>
   <% if @rep['twitter_id'] %>
     <%= link_to image_tag("http://www.leap-program.org/site/wp-content/uploads/2012/12/twitterbutton2.png", height: '32'), "http://twitter.com/#{@rep['twitter_id']}"%>
   <% end %>
   <% if @rep['youtube_id'] %>
     <%= link_to image_tag("http://cliparts.co/cliparts/di9/Xon/di9XonMjT.png", height: '32'), "http://youtube.com/#{@rep['youtube_id']}"%>
   <%end%>
+  <h3>Recent Votes</h3>
+  <ul>
+  <% @votes.each do |vote| %>
+    <li>
+      <p><%= vote.vote %> <%= vote.number %> <%= vote.description %></p>
+    </li>
+  <% end %>
+  </ul>
+  <% if @floor_updates %>
+    <h3>Floor Updates</h3>
+    <ul>
+    <% @floor_updates.each do |floor| %>
+      <li><%= floor["update"] %></li><br />
+    <% end %>
+    </ul>
+  <% end %>
   <h3>Committees</h3>
 
   <ul>

@@ -21,4 +21,9 @@ class SunlightService
     JSON.parse(response)
   end
 
+  def get_floor_updates(bioguide)
+    response = Net::HTTP.get_response(URI.parse("http://congress.api.sunlightfoundation.com/floor_updates?legislator_ids=#{bioguide}&apikey=#{@api_key}")).body
+    JSON.parse(response)
+  end
+
 end
