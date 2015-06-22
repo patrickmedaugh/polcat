@@ -14,7 +14,7 @@
     </li>
   <% end %>
   </ul>
-  <% if @floor_updates %>
+  <% if !@floor_updates.empty? %>
     <h3>Floor Updates</h3>
     <ul>
     <% @floor_updates.each do |floor| %>
