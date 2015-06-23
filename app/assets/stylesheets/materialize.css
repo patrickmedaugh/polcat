@@ -7930,11 +7930,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 #start{
   position: absolute;
-  margin-top: -700px;
-  margin-left: 540px;
+  margin-top: -50%;
+  margin-left: 50%;
+  margin-right: 10% auto;
   z-index: 999;
 }
+.hidden{
+  display:none;
+}
+.background-image{
+  min-width: 800px;
+}
+.rep-column{
 
+}
+.vote-column{
+  
+}
 
 /* ==========================================================================
    $DEFAULT-TIME-PICKER
