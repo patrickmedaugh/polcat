@@ -1669,8 +1669,15 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0;
-}
+    margin: 0;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -2183,7 +2190,6 @@ ul.staggered-list li {
     text-align: center; } }
 
 footer.page-footer {
-  margin-top: 20px;
   padding-top: 20px;
   background-color: #ee6e73; }
   footer.page-footer .footer-copyright {
@@ -7922,6 +7928,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .picker--time .picker__button--clear:hover:before, .picker--time .picker__button--clear:focus:before {
   color: #ffffff; }
 
+#start{
+  position: absolute;
+  margin-top: -700px;
+  margin-left: 540px;
+  z-index: 999;
+}
+
+
 /* ==========================================================================
    $DEFAULT-TIME-PICKER
    ========================================================================== */
@@ -7943,3 +7957,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+
+    * {
+    	margin: 0;
+    }
+
+/* sticky footer */
+.container{
+  min-height: 100%;
+}

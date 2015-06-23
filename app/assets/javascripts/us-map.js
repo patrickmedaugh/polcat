@@ -56,8 +56,8 @@
   var defaults = {
     // The styles for the state
     'stateStyles': {
-      fill: "#333",
-      stroke: "#666",
+      fill: "#707070",
+      stroke: "white",
       "stroke-width": 1,
       "stroke-linejoin": "round",
       scale: [1, 1]
@@ -65,7 +65,7 @@
 
     // The styles for the hover
     'stateHoverStyles': {
-      fill: "#33c",
+      fill: "#4d4d4d",
       stroke: "#000",
       scale: [1.1, 1.1]
     },
@@ -349,7 +349,7 @@
 
         // Create the hit areas
         this.labelHitAreas[state] = R.rect(x, y, shapeWidth, shapeHeight, shapeRadius).attr({
-          fill: "#000",
+          fill: "#000000",
           "stroke-width": 0,
           "opacity" : 0.0,
           'cursor': 'pointer'

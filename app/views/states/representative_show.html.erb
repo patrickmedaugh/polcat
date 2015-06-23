@@ -1,5 +1,5 @@
 <div class='container center-align'>
-  <h1><%= @rep['first_name'] %> <%= @rep['last_name'] %> <em><%= @rep['party'] %></em></h1>
+  <h1><%= @rep['first_name'] %> <%= @rep['last_name'] %> <em>(<%= @rep['party'] %>-<%= @rep['state']%>)</em></h1>
   <% if @rep['twitter_id'] %>
     <%= link_to image_tag("http://www.leap-program.org/site/wp-content/uploads/2012/12/twitterbutton2.png", height: '32'), "http://twitter.com/#{@rep['twitter_id']}"%>
   <% end %>
@@ -31,3 +31,7 @@
   </ul>
 
 </div>
+<%= link_to "Back to Map", current_user, class: "light-blue lighten-3 waves-effect waves-light btn-large" %>
+
+<footer class='page-footer light-blue lighten-3'>
+</footer>
