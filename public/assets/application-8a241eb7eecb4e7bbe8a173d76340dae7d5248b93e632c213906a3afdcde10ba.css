@@ -3,6 +3,7 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -7983,7 +7984,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 #dropdown1{
   background-color: B74F6F;
 }
-/*yo*/
 .vote-header{
   background-color: #B74F6F;
   color: white;
@@ -7994,3 +7994,19 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 200;
 }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
