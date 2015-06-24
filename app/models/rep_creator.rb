@@ -8,12 +8,14 @@ class RepCreator
     service.find_by_state(state)
   end
 
-  def self.find_by_votesmart(votesmart)
-    service.find_by_votesmart(votesmart)
+  def self.find_by_bioguide(bioguide)
+    rep = service.find_by_bioguide(bioguide)
+    rep["results"].first
   end
 
   def self.get_committees(bioguide)
-    service.get_committees(bioguide)
+    committees = service.get_committees(bioguide)
+    committees["results"]
   end
 
   def self.get_floor_updates(bioguide)

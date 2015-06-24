@@ -5,7 +5,7 @@ RSpec.describe GovtrackService do
     it "20 most recent returned for representative" do
       VCR.use_cassette("vote_results") do
         votes = GovtrackService.retrieve_recent_votes("400090")
-        expect(votes.first.id).to eq("\n116690")
+        expect(votes.first.id).to eq("\n116698")
       end
     end
 

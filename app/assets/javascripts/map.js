@@ -12,11 +12,13 @@ $(document).ready(function() {
         success: function(reps){
           $('#representatives').empty();
           $('#representatives').addClass("collection");
+          $('#representatives').append("<a class='dropdown-button btn' data-activates='#dropdown1'>" + data.name + " State Representatives</a>");
+          $('#representatives').append("<ul id='dropdown1' class=''></ul>");
           $.each(reps.results, function(index, rep){
-            $('#representatives').append("<a class='collection-item' href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.first_name + " " + rep.last_name + "</p></a>");
-            $('#map').addClass('hidden');
+            console.log(rep);
+            // $('#representatives').append("<a class='collection-item' href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.first_name + " " + rep.last_name + "</p></a>");
+            $('#dropdown1').append("<li><a class='collection-item' href= '/representative/" + rep.bioguide_id + "' >" + rep.first_name + " " + rep.last_name + "</a></li>");
           })//each
-          $('#representatives').append("<a class='mapback collection-item'>Back to Map</a>");
         }//success
       })//ajax
     }//click

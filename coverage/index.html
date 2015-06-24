@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-06-22T15:42:08-06:00">2015-06-22T15:42:08-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-06-23T23:01:47-06:00">2015-06-23T23:01:47-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.2%</span></span>
+    (<span class="covered_percent"><span class="yellow">85.9%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.34
+         2.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>29</b> files in total.
-    <b>153</b> relevant lines. 
-    <span class="green"><b>138</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>156</b> relevant lines. 
+    <span class="green"><b>134</b> lines covered</span> and
+    <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -142,12 +142,12 @@
       
       <tr>
         <td class="strong"><a href="#85302346987db7030a5554e4a84d87cbfb9c09b0" class="src_link" title="app/services/sunlight_service.rb">app/services/sunlight_service.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>29</td>
-        <td>17</td>
-        <td>17</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="red strong">80.0 %</td>
+        <td>34</td>
+        <td>20</td>
+        <td>16</td>
+        <td>4</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -332,12 +332,12 @@
       
       <tr>
         <td class="strong"><a href="#1e40211fc866503e29c2ff339ccffd2eebce4483" class="src_link" title="spec/services/sunlight_service_spec.rb">spec/services/sunlight_service_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="yellow strong">85.0 %</td>
         <td>36</td>
         <td>20</td>
-        <td>20</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>17</td>
+        <td>3</td>
+        <td>0.9</td>
       </tr>
       
     </tbody>
@@ -511,13 +511,13 @@
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    @rep = RepCreator.find_by_votesmart(params[:votesmart]).first.last.last</code>
+          <code class="ruby">    @rep = RepCreator.find_by_bioguide(params[:bioguide])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    @committees = RepCreator.get_committees(@rep[&#39;bioguide_id&#39;])[&quot;results&quot;]</code>
+          <code class="ruby">    @committees = RepCreator.get_committees(params[:bioguide])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
@@ -529,7 +529,7 @@
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">    @floor_updates = RepCreator.get_floor_updates(@rep[&#39;bioguide_id&#39;])</code>
+          <code class="ruby">    @floor_updates = RepCreator.get_floor_updates(params[:bioguide])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -1085,11 +1085,11 @@
         <div class="source_table" id="85302346987db7030a5554e4a84d87cbfb9c09b0">
   <div class="header">
     <h3>app/services/sunlight_service.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">80.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -1180,14 +1180,14 @@
           <code class="ruby">  def find_by_votesmart(votesmart)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/legislators?votesmart_id=#{votesmart}&amp;apikey=#{@api_key}&quot;)).body</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
           
           <code class="ruby">    JSON.parse(response)</code>
         </li>
@@ -1207,17 +1207,17 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  def get_committees(bioguide)</code>
+          <code class="ruby">  def find_by_bioguide(bioguide)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
           
-          <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/committees?member_ids=#{bioguide}&amp;apikey=#{@api_key}&quot;)).body</code>
+          
+          <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/legislators?bioguide_id=#{bioguide}&amp;apikey=#{@api_key}&quot;)).body</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">    JSON.parse(response)</code>
         </li>
@@ -1237,13 +1237,13 @@
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">  def get_floor_updates(bioguide)</code>
+          <code class="ruby">  def get_committees(bioguide)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/floor_updates?legislator_ids=#{bioguide}&amp;apikey=#{@api_key}&quot;)).body</code>
+          <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/committees?member_ids=#{bioguide}&amp;apikey=#{@api_key}&quot;)).body</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
@@ -1264,7 +1264,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def get_floor_updates(bioguide)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    response = Net::HTTP.get_response(URI.parse(&quot;http://congress.api.sunlightfoundation.com/floor_updates?legislator_ids=#{bioguide}&amp;apikey=#{@api_key}&quot;)).body</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    JSON.parse(response)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
@@ -2431,7 +2461,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;representative/:votesmart&#39;, to: &quot;states#representative_show&quot;, as: &quot;representative&quot;</code>
+          <code class="ruby">  get &#39;representative/:bioguide&#39;, to: &quot;states#representative_show&quot;, as: &quot;representative&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -2917,7 +2947,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(votes.first.id).to eq(&quot;\n116690&quot;)</code>
+          <code class="ruby">        expect(votes.first.id).to eq(&quot;\n116698&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -2957,11 +2987,11 @@
         <div class="source_table" id="1e40211fc866503e29c2ff339ccffd2eebce4483">
   <div class="header">
     <h3>spec/services/sunlight_service_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">85.0 %</span> covered</h4>
     <div>
       <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -3049,23 +3079,23 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;can find representative by votesmart id&quot; do</code>
+          <code class="ruby">    xit &quot;can find representative by votesmart id&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">      VCR.use_cassette(&quot;rep_results&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
           
           <code class="ruby">        rep = ss.find_by_votesmart(&quot;345&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
           
           <code class="ruby">        expect(rep[&#39;results&#39;].first[&#39;bioguide_id&#39;]).to eq(&quot;C000984&quot;)</code>
         </li>

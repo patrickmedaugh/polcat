@@ -16,6 +16,11 @@ class SunlightService
     JSON.parse(response)
   end
 
+  def find_by_bioguide(bioguide)
+    response = Net::HTTP.get_response(URI.parse("http://congress.api.sunlightfoundation.com/legislators?bioguide_id=#{bioguide}&apikey=#{@api_key}")).body
+    JSON.parse(response)
+  end
+
   def get_committees(bioguide)
     response = Net::HTTP.get_response(URI.parse("http://congress.api.sunlightfoundation.com/committees?member_ids=#{bioguide}&apikey=#{@api_key}")).body
     JSON.parse(response)

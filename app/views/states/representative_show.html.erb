@@ -27,15 +27,26 @@
 </div>
 
 <div class='vote-column col s12 m8 l9'>
-  <h3>Recent Votes</h3>
+  <h3 id='vote-header'>Recent Votes</h3>
   <ul>
   <% @votes.each do |vote| %>
-    <li>
-      <p><%= vote.vote %> <%= vote.number %> <%= vote.description %></p>
-    </li>
+  <% puts vote %>
+    <%if vote.vote == "Nay" || vote.vote == "No"%>
+      <li>
+        <p class=""><%= image_tag("http://www.clker.com/cliparts/0/7/e/a/12074327311562940906milker_X_icon.svg.med.png", height: '25')%> <%= vote.number %> <%= vote.description %></p>
+      </li>
+    <%elsif vote.vote == "Yea" || vote.vote == "Aye" %>
+      <li>
+        <p class=""><%= image_tag("https://upload.wikimedia.org/wikipedia/commons/8/8f/Checkmark.svg", height: '25') %> <%= vote.number %> <%= vote.description %></p>
+      </li>
+    <% else vote.vote %>
+      <li>
+        <p><%= vote.vote %> <%= vote.number %> <%= vote.description %></p>
+      </li
+    <% end %>
   <% end %>
   </ul>
-  <% if !@floor_updates.empty? %>
+  <% if @floor_updates.first %>
     <h3>Floor Updates</h3>
     <ul>
     <% @floor_updates.each do |floor| %>

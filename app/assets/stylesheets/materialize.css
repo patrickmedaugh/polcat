@@ -5627,7 +5627,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #FFF;
-  background-color: #26a69a;
+  background-color: #B74F6F;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -5636,8 +5636,10 @@ small {
   -ms-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer; }
-  .btn:hover, .btn-large:hover {
-    background-color: #2bbbad; }
+
+.btn:hover, .btn-large:hover {
+
+background-color: #D35F7E; }
 
 .btn-floating {
   display: inline-block;
@@ -7945,7 +7947,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 }
 .vote-column{
-  
+
 }
 
 /* ==========================================================================
@@ -7977,4 +7979,13 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 /* sticky footer */
 .container{
   min-height: 100%;
+}
+#dropdown1{
+  background-color: B74F6F;
+}
+#vote-header{
+  background-color: #B74F6F;
+  color: white;
+  height: 1.4em;
+  padding: auto;
 }
