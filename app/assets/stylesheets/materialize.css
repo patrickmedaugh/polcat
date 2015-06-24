@@ -7992,5 +7992,5 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding-left: 5px;
   font-family: "Roboto", sans-serif;
   src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 200;
+  font-weight: 100;
 }
