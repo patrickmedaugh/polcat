@@ -7,15 +7,15 @@ $(document).ready(function() {
   $('#map').usmap({
     click: function(event, data) {
       console.log(data);
-      $.ajax({
-        type: "GET",
-        status: 200,
-        url: "/states/" + data.name + ".json",
-        success: function(reps){
-          $('#representatives').empty();
-          $('#representatives').addClass("collection");
-          $('#representatives').append("<a class='dropdown-button btn' data-activates='#dropdown1'>" + data.name + " State Representatives</a>");
-          $('#representatives').append("<ul id='dropdown1' class=''></ul>");
+      // $.ajax({
+      //   type: "GET",
+      //   status: 200,
+      //   url: "/states/" + data.name + ".json",
+      //   success: function(reps){
+      //     $('#representatives').empty();
+      //     $('#representatives').addClass("collection");
+      //     $('#representatives').append("<a class='dropdown-button btn' data-activates='#dropdown1'>" + data.name + " State Representatives</a>");
+      //     $('#representatives').append("<ul id='dropdown1' class=''></ul>");
           // $.each(reps.results, function(index, rep){
             // console.log(rep);
             // $('#representatives').append("<a class='collection-item' href= '/representative/" + rep.votesmart_id + "' ><p>" + rep.first_name + " " + rep.last_name + "</p></a>");
