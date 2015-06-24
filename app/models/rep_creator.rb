@@ -20,6 +20,10 @@ class RepCreator
 
   def self.get_floor_updates(bioguide)
     updates = service.get_floor_updates(bioguide)
-    updates["results"].first(5)
+    updates = updates["results"].first(5)
+    updates = updates.map do |update|
+      update["update"].force_encoding("ASCII-8BIT")
+    end
+    updates
   end
 end

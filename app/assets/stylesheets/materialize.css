@@ -7983,7 +7983,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 #dropdown1{
   background-color: B74F6F;
 }
-#vote-header{
+.vote-header{
   background-color: #B74F6F;
   color: white;
   height: 1.4em;
