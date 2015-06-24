@@ -8,6 +8,7 @@ $(document).ready(function() {
     click: function(event, data) {
       $.ajax({
         type: "GET",
+        status: 200,
         url: "/states/" + data.name + ".json",
         success: function(reps){
           $('#representatives').empty();
