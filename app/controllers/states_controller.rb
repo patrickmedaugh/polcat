@@ -2,8 +2,6 @@ class StatesController < ApplicationController
 
   def show
     @reps = RepCreator.find_by_state(params[:state])
-    puts "HERE IS THE KEY"
-    puts ENV['SUNLIGHT_KEY']
     respond_to do |format|
       format.json { render json: @reps }
     end

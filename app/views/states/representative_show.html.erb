@@ -35,14 +35,17 @@
       <li>
         <p class=""><%= image_tag("http://www.clker.com/cliparts/0/7/e/a/12074327311562940906milker_X_icon.svg.med.png", height: '25')%> <%= vote.number %> <%= vote.description %></p>
       </li>
+      <li class="divider"></li>
     <%elsif vote.vote == "Yea" || vote.vote == "Aye" %>
       <li>
         <p class=""><%= image_tag("https://upload.wikimedia.org/wikipedia/commons/8/8f/Checkmark.svg", height: '25') %> <%= vote.number %> <%= vote.description %></p>
       </li>
+      <li class="divider"></li>
     <% else vote.vote %>
       <li>
         <p><%= vote.vote %> <%= vote.number %> <%= vote.description %></p>
-      </li
+      </li>
+      <li class="divider"></li>
     <% end %>
   <% end %>
   </ul>
