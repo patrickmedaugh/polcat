@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :users
-  # resources :states, only: [:show]
 
 
   get 'states/:state', to: "states#show", as: "states"
@@ -9,4 +8,5 @@ Rails.application.routes.draw do
   get '/logout', to: "sessions#destroy"
   delete '/logout', to: "sessions#destroy"
   get 'representative/:bioguide', to: "states#representative_show", as: "representative"
+
 end
