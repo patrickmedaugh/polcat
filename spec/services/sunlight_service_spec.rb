@@ -11,10 +11,10 @@ RSpec.describe SunlightService do
       end
     end
 
-    xit "can find representative by votesmart id" do
-      VCR.use_cassette("rep_results") do
-        rep = ss.find_by_votesmart("345")
-        expect(rep['results'].first['bioguide_id']).to eq("C000984")
+    it 'can find representatives by bioguide id' do
+      VCR.use_cassette('repcreator#bioguide') do
+        rep = ss.find_by_bioguide("C001096")
+        expect(rep['results'].first['first_name']).to eq("Kevin")
       end
     end
 
