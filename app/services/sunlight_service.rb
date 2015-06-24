@@ -3,7 +3,7 @@ require 'sunlight'
 class SunlightService
   attr_reader :api_key
   def initialize
-    @api_key = ENV['SUNLIGHT_KEY']
+    @api_key = p(ENV['SUNLIGHT_KEY'])
   end
 
   def find_by_state(state)
