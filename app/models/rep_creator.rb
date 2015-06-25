@@ -29,10 +29,4 @@ class RepCreator
     end}.value
   end
 
-  # def self.get_all(bioguide)
-  #   threads = []
-  #   threads << Thread.new { get_floor_updates(bioguide) }.value
-  #   threads << Thread.new { get_committees(bioguide) }.value
-  #   threads
-  # end
 end

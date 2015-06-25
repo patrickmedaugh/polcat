@@ -28,7 +28,7 @@ class GovtrackService
 
   def self.create_vote(response, descriptions)
     v = Vote.new
-    v.id = response.shift#.gsub(/[\n]/)
+    v.id = response.shift
     v.created_at = response.shift
     v.vote = response.shift
     v.category = response.shift
