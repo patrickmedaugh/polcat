@@ -9,10 +9,8 @@ class RepCreator
   end
 
   def self.find_by_bioguide(bioguide)
-    Thread.new{
     rep = service.find_by_bioguide(bioguide)
     rep["results"].first
-    }.value
   end
 
   def self.get_committees(bioguide)

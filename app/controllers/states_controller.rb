@@ -8,10 +8,12 @@ class StatesController < ApplicationController
   end
 
   def representative_show
-    @rep = RepCreator.find_by_bioguide(params[:bioguide])
-    @committees = RepCreator.get_committees(params[:bioguide])
-    @votes = VoteCreator.retrieve_recent_votes(@rep['govtrack_id'])
-    @floor_updates = RepCreator.get_floor_updates(params[:bioguide])
+    @rep, @committees, @floor_updates = [
+      Thread.new{RepCreator.find_by_bioguide(params[:bioguide])},
+      Thread.new{RepCreator.get_committees(params[:bioguide])},
+      Thread.new{RepCreator.get_floor_updates(params[:bioguide])},
+    ].map(&:value)
+    @votes = Thread.new{VoteCreator.retrieve_recent_votes(@rep['govtrack_id'])}.value
   end
 
 end
