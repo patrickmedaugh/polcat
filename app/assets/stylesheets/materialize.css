@@ -5143,17 +5143,14 @@ nav {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 200; }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300; }
 
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400; }
 
 @font-face {
@@ -5163,7 +5160,6 @@ nav {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
 
 a {
@@ -7941,6 +7937,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   display:none;
 }
 .background-image{
+  z-index: -1;
   min-width: 800px;
 }
 .rep-column{
@@ -7991,9 +7988,41 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding-top: 5px;
   padding-left: 5px;
   font-family: "Nixie One", sans-serif;
-  src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 100;
 }
 .rep-headers{
   font-family: "Nixie One", sans-serif;
+}
+
+.login-modal {
+  background-color: #81d4fa;
+  z-index: 999;
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100px;
+  top: 200px;
+  padding-top: 55px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+   -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.modal-login-button {
+  background-color: white;
+  color: #81D4FA;
+  z-index: 999;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-color: #81d4fa;
+}
+.hidden {
+  display: none !important ;
 }
