@@ -1,7 +1,6 @@
 # require 'govtrack'
 require 'ostruct'
 class GovtrackService
-
   def self.retrieve_recent_votes(govtrack_id)
     response = get_vote_info(govtrack_id)
     descriptions = get_vote_description

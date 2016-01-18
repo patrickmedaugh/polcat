@@ -5,7 +5,7 @@ class RepCreator
   end
 
   def self.find_by_state(state)
-      service.find_by_state(state)
+    service.find_by_state(state)
   end
 
   def self.find_by_bioguide(bioguide)
@@ -14,19 +14,16 @@ class RepCreator
   end
 
   def self.get_committees(bioguide)
-    Thread.new{
     committees = service.get_committees(bioguide)
     committees["results"]
-    }.value
   end
 
   def self.get_floor_updates(bioguide)
-    Thread.new{
     updates = service.get_floor_updates(bioguide)
     updates = updates["results"].first(5)
     updates = updates.map do |update|
       update["update"].force_encoding("ASCII-8BIT")
-    end}.value
+    end
   end
 
 end
