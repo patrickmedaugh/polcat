@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  respond_to :json
   def create
     user = User.find_or_create_from_auth(omniauth)
     session[:user_id] = user.id
@@ -13,6 +14,10 @@ class SessionsController < ApplicationController
     session.clear
 
     redirect_to root_path
+  end
+
+  def show
+    respond_with current_user
   end
 
   protected
