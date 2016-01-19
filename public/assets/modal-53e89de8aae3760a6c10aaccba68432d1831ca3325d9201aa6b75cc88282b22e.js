@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".login-button").click(function(e){e.preventDefault(),$.get("/current_user_signed_in",function(data){null===data&&($(".login-modal").removeClass("hidden"),$(".login-modal").css("height","200px"))})})});

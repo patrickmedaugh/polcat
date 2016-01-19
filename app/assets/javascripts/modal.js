@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('.login-button').click(function(e) {
-    e.preventDefault();
     $.get('/current_user_signed_in', function(data) {
       if(data === null) {
         $('.login-modal').removeClass('hidden');

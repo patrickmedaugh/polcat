@@ -7977,10 +7977,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .container{
   min-height: 100%;
 }
+
 #dropdown1{
   background-color: B74F6F;
 }
-/*yo*/
+
 .vote-header{
   background-color: #B74F6F;
   color: white;
@@ -7990,6 +7991,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   font-family: "Nixie One", sans-serif;
   font-weight: 100;
 }
+
 .rep-headers{
   font-family: "Nixie One", sans-serif;
 }
